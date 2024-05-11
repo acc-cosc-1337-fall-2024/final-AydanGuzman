@@ -2,6 +2,8 @@
 #include "catch.hpp"
 #include <die.h>
 #include <roll.h>
+#include "shooter.h"
+
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -53,6 +55,25 @@ TEST_CASE("Verify Dice rolls return values 1-6 10 times") {
 	{
 		int value = roll.roll_value();
 		REQUIRE((value >= 2 && value <= 12));
+		
+	}
+	
+}
+
+TEST_CASE("Verify that Shooter returns a Roll with valid roll result") {
+	Die die1;
+	Die die2;
+
+	Shooter shooter;
+	
+
+	for (int i = 0; i < 10; ++i)
+	{
+		Roll* roll = shooter.throw_dice(die1, die2);
+		int rollValue = roll->roll_value();
+		std::cout << "Roll value " << rollValue;
+		REQUIRE(rollValue >=2);
+		REQUIRE(rollValue <= 12);
 		
 	}
 	
