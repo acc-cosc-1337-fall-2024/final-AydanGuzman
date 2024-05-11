@@ -1,4 +1,6 @@
 //
+#ifndef DIE_H
+#define DIE_H
 
 #include <cstdlib>
 
@@ -12,3 +14,4 @@ private:
     int sides{6};
 
 };
+#endif
