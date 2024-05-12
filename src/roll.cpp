@@ -14,3 +14,4 @@ void Roll::roll_dice() {
 int Roll::roll_value() const {
         return rolled_value;
     }
+    

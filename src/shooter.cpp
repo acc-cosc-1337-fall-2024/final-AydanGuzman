@@ -21,3 +21,4 @@ Shooter::~Shooter() {
     }
     rolls.clear();
 }
+
